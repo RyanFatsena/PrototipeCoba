@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Peternak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+    .navbar { background-color: #2e7d32; }
+    .navbar-brand { color: white; font-weight: bold; }
+    .menu-card { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar px-3 d-flex justify-content-between align-items-center">
+  <span class="navbar-brand">Dashboard Peternak</span>
+  <div class="d-flex align-items-center gap-3">
+    <button class="btn btn-light p-1" onclick="showNotifModal()">🔔</button>
+    <div class="dropdown">
+      <a class="btn dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">👤</a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="profil_peternak.html">Lihat Profil</a></li>
+        <li><a class="dropdown-item text-danger" href="index.html">Logout ⏻</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h6 class="fw-bold text-success">Pembelian</h6>
+  <!-- <div class="card menu-card p-3 mb-2" onclick="location.href=''"> </div> -->
+    <div class="container mt-4">
+    <div class="row g-3"> 
+      <div class="col-6">
+        <a href="etalase_toko.html" class="text-decoration-none">
+          <div class="card text-center p-3 shadow-sm">
+            <div style="font-size:40px;">🛒</div>
+            <h6 class="text-success mt-2">Beli Obat/Itik/Pakan →</h6>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>  
+
+    <div class="container mt-4"></div>
+  <h6 class="fw-bold text-success">Pesanan</h6>
+    <div class="container mt-4">
+    <div class="row g-3"> 
+      <div class="col-6">
+        <a href="pesanan_masuk.html" class="text-decoration-none">
+          <div class="card text-center p-3 shadow-sm">
+            <div style="font-size:40px;">📥</div>
+            <h6 class="text-success mt-2">Pesanan Masuk →</h6>
+          </div>
+        </a>
+      </div>
+      <div class="col-6">
+        <a href="kirim_pesanan.html" class="text-decoration-none">
+          <div class="card text-center p-3 shadow-sm">
+            <div style="font-size:40px;">🚚</div>
+            <h6 class="text-success mt-2">Kirim Pesanan →</h6>
+          </div>
+        </a>
+      </div>
+      </div>  
+    </div>
+
+<div class="container mt-4"></div>
+  <h6 class="fw-bold text-success">Etalase</h6>
+  <!-- <div class="card menu-card p-3 mb-2" onclick="location.href=''">📦 </div> -->
+  <div class="container mt-4">
+    <div class="row g-3"> 
+      <div class="col-6">
+        <a href="tambah_ubah_produk.html" class="text-decoration-none">
+          <div class="card text-center p-3 shadow-sm">
+            <div style="font-size:40px;">➕</div>
+            <h6 class="text-success mt-2">Tambah/Edit Produk →</h6>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Notifikasi -->
+<div class="modal fade" id="notifModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-3">
+      <div class="modal-body">
+        <span style="font-size:40px;">📦</span>
+        <h6 class="mt-2">Pesanan Baru</h6>
+        <p>Ada pesanan baru yang harus diproses.</p>
+        <button class="btn btn-success" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function showNotifModal() {
+    var notif = new bootstrap.Modal(document.getElementById('notifModal'));
+    notif.show();
+  }
+</script>
+
+<nav class="navbar fixed-bottom bg-white border-top shadow-sm">
+  <div class="container d-flex justify-content-around text-center">
+    <a href="dashboard_peternak.html" class="text-decoration-none text-success">🏠<div style="font-size:13px;">Beranda</div></a>
+    <a href="riwayat_pesanan.html" class="text-decoration-none text-dark">📦<div style="font-size:13px;">Riwayat</div></a>
+    <a href="profil_peternak.html" class="text-decoration-none text-dark">👤<div style="font-size:13px;">Profil</div></a>
+  </div>
+</nav>
+
+</body>
+</html>

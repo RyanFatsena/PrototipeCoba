@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah & Ubah Produk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+    .navbar { background-color: #2e7d32; }
+    .navbar-brand { color: white; font-weight: bold; }
+    .btn-hapus { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar px-3">
+    <a href="dashboard_toko.html" class="text-white">⬅</a>
+    <span class="navbar-brand mx-auto">Tambah / Ubah Produk</span>
+  </nav>
+
+  <!-- Konten -->
+  <div class="container mt-4">
+    <div class="text-center mb-3">
+      <span style="font-size:40px;">🛒</span><!-- img src="assets/duck1.png" alt="Produk" width="100" class="rounded-circle">
+    </div>
+
+    <form>
+      <!-- Kategori -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Kategori Produk</label>
+        <select class="form-select">
+          <option>Pilih Kategori</option>
+          <option>Itik</option>
+          <option>Obat</option>
+          <option>Pakan</option>
+        </select>
+      </div>
+
+      <!-- Harga -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Harga Produk</label>
+        <input type="number" class="form-control" placeholder="Rp">
+      </div>
+
+      <!-- Jumlah -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Jumlah Produk</label>
+        <input type="number" class="form-control" placeholder="Jumlah Produk">
+      </div>
+
+      <!-- Ketersediaan -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Ketersediaan Produk</label>
+        <select class="form-select">
+          <option>Pilih Ketersediaan</option>
+          <option>Ready</option>
+          <option>Pre-Order</option>
+        </select>
+      </div>
+
+      <!-- Tombol -->
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success">Simpan</button>
+        <button type="button" class="btn btn-secondary">Ubah</button>
+        <button type="button" class="btn btn-hapus" data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal Konfirmasi Hapus -->
+  <div class="modal fade" id="hapusModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Konfirmasi Hapus</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Apakah Anda yakin ingin menghapus produk ini? Data yang dihapus tidak dapat dikembalikan.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger">Ya, Hapus</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar Bawah -->
+  
+  <!-- Navbar Bawah -->
+  <nav class="navbar fixed-bottom bg-white border-top shadow-sm">
+    <div class="container d-flex justify-content-around text-center">
+      <a href="dashboard_toko.html" class="text-decoration-none text-dark">
+        <div>🏠<div style="font-size: 13px;">Beranda</div></div>
+      </a>
+      <a href="riwayat_pesanan.html" class="text-decoration-none text-success">
+        <div>📦<div style="font-size: 13px;">Riwayat</div></div>
+      </a>
+      <a href="profil_toko.html" class="text-decoration-none text-dark">
+        <div>👤<div style="font-size: 13px;">Profil</div></div>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>
